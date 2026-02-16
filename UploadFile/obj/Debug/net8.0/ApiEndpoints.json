@@ -1,24 +1,8 @@
 [
   {
     "ContainingType": "UploadFile.Controllers.UploadController",
-    "Method": "UploadFile",
-    "RelativePath": "api/Upload",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "formFile",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "UploadFile.Controllers.UploadController",
     "Method": "DownloadFile",
-    "RelativePath": "api/Upload",
+    "RelativePath": "api/manageFile/download",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -26,6 +10,22 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UploadFile.Controllers.UploadController",
+    "Method": "UploadFile",
+    "RelativePath": "api/manageFile/upload",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "formFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
         "IsRequired": false
       }
     ],

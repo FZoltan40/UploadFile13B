@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/Upload": {
+    "/api/manageFile/upload": {
       "post": {
         "tags": [
           "Upload"
@@ -35,7 +35,9 @@
             "description": "OK"
           }
         }
-      },
+      }
+    },
+    "/api/manageFile/download": {
       "get": {
         "tags": [
           "Upload"

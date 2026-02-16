@@ -5,7 +5,7 @@ using UploadFile.Services.IUploadFile;
 
 namespace UploadFile.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/manageFile")]
     [ApiController]
     public class UploadController : ControllerBase
     {
@@ -17,7 +17,7 @@ namespace UploadFile.Controllers
             this.upload = upload;
         }
 
-        [HttpPost]
+        [HttpPost("upload")]
         public async Task<ActionResult<object>> UploadFile(IFormFile formFile)
         {
             var up = await upload.UploadFile(formFile);
@@ -29,7 +29,7 @@ namespace UploadFile.Controllers
             return BadRequest();
         }
 
-        [HttpGet]
+        [HttpGet("download")]
         public async Task<ActionResult> DownloadFile(int id)
         {
             var file = await upload.DowloadFile(id) as Image;
