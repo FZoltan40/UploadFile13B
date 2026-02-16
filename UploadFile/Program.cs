@@ -1,4 +1,8 @@
 
+using UploadFile.Models;
+using UploadFile.Services;
+using UploadFile.Services.IUploadFile;
+
 namespace UploadFile
 {
     public class Program
@@ -6,6 +10,9 @@ namespace UploadFile
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            builder.Services.AddDbContext<PicturesContext>();
+            builder.Services.AddScoped<IUpload, Upload>();
 
             // Add services to the container.
 
